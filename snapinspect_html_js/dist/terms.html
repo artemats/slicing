@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="admin">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/ico">
+
+    <title>SnapInspect</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <meta name="theme-color" content="#0069ff">
+    <meta name="msapplication-navbutton-color" content="#0069ff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0069ff">
+
+    <style>.__on-load-show{-webkit-transition:opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1);transition:opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1);-o-transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1);transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1);transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1)}.__on-load-show.__hide.__to-down{-webkit-transform:translate(0,-100px);-ms-transform:translate(0,-100px);transform:translate(0,-100px);opacity:0}.__on-load-show.__hide.__to-up{-webkit-transform:translate(0,100px);-ms-transform:translate(0,100px);transform:translate(0,100px);opacity:0}.__on-load-show.__hide.__to-right{-webkit-transform:translate(-100px,0);-ms-transform:translate(-100px,0);transform:translate(-100px,0);opacity:0}.__on-load-show.__hide.__to-left{-webkit-transform:translate(100px,0);-ms-transform:translate(100px,0);transform:translate(100px,0);opacity:0}.__on-load-show.__hide.__to-fadeIn{opacity:0}.__on-load-show.__hide.__step.__to-left{-webkit-transform:translate(400px,0);-ms-transform:translate(400px,0);transform:translate(400px,0)}.__on-load-show.__hide.__to-zoom{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}.__on-load-show.__to-zoom{opacity:1}.__on-load-show.header{-webkit-transition-delay:.4s;-o-transition-delay:.4s;transition-delay:.4s}.__on-load-show.toggle-folder-video-circle-wrap{-webkit-transition:-webkit-transform 2s cubic-bezier(.6,.1,.15,1);transition:-webkit-transform 2s cubic-bezier(.6,.1,.15,1);-o-transition:transform 2s cubic-bezier(.6,.1,.15,1);transition:transform 2s cubic-bezier(.6,.1,.15,1);transition:transform 2s cubic-bezier(.6,.1,.15,1),-webkit-transform 2s cubic-bezier(.6,.1,.15,1);-webkit-transition-delay:1.4s;-o-transition-delay:1.4s;transition-delay:1.4s}.__on-load-show.toggle-folder-video-btn-wrap{-webkit-transition-delay:1.2s;-o-transition-delay:1.2s;transition-delay:1.2s}.__on-load-show.folder-section-preview{-webkit-transition-delay:1s;-o-transition-delay:1s;transition-delay:1s}</style>
+
+    <link rel="preload" href="fonts/poppins-v6-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-500.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-600.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-700.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+    <link rel="prefetch" href="styles.min.css" as="style">
+    <link rel="prefetch" href="script.min.js" as="script">
+
+    <link rel="stylesheet" href="styles.min.css?rev=fa418158618c8dc7adff94f9e3848b8c" onload="this.onload=null;this.rel='stylesheet'">
+
+</head>
+<body>
+
+<div id="wrapper">
+    <header class="header __blue-theme __on-load-show __hide __to-down">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6 col-12">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" class="logo-image" alt="SnapInspect">
+                    </a>
+                </div>
+                <div class="col-md-4 col-md-offset-5 col-sm-6 col-xs-6 col-12">
+                    <div class="user-panel">
+                        <a href="pricing.html" class="nav-link __blue">Pricing</a>
+                        <a href="#" class="nav-link __blue">Blog</a>
+                        <a href="demo.html" class="btn-link __border-theme __blue-theme">Try Snapinspect</a>
+                        <button class="toggle-nav-menu">
+                            <span class="toggle-nav-menu-wrap">
+                                <span class="toggle-nav-menu-arrow"></span>
+                                <span class="toggle-nav-menu-arrow"></span>
+                                <span class="toggle-nav-menu-arrow"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section text-page __on-load-show __hide __to-fadeIn">
+        <div class="abstract-element __28">
+            <div class="abstract-element-image __28_2 __on-scroll-show __hide __to-right __step">
+                <img src="img/abstract/28_2.png" class="abstract-element-image-item __move-element __move-speed-4" alt="">
+            </div>
+            <div class="abstract-element-image __28_1 __on-scroll-show __hide __to-left __step">
+                <img src="img/abstract/28_1.png" class="abstract-element-image-item __move-element __move-speed-2" alt="">
+            </div>
+        </div>
+        <div class="abstract-element __29">
+            <div class="abstract-element-image __29_1 __on-scroll-show __hide __to-left __step">
+                <img src="img/abstract/29.png" class="abstract-element-image-item __move-element __move-speed-2" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="title-1">Terms of Service</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="start-sticky"></div>
+                    <div class="page-nav-wrap">
+                        <div class="card-item page-nav">
+                            <h3 class="title-3 __blue">Terms of Service</h3>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#1">Communications</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#2">Content</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#3">Accounts</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#4">Links To Other Web Sites</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#5">Termination</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#6">Indemnification</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#7">Limitation Of Liability</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#8">Disclaimer</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#9">Exclusions</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#10">Governing Law</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#11">Changes</button>
+                            <button class="nav-scroll-link __scroll-link" data-scroll-id="#12">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-12 col-xs-12">
+                    <p class="paragraph update-title">Last updated: <span class="__blue">April 05, 2015</span></p>
+                    <p class="paragraph">Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the
+                        <a href="www.snapinspect.com" target="_blank">www.snapinspect.com</a> website and the SnapInspect mobile application (together, or individually, the "Service") operated by SnapInspect International Ltd ("us", "we", or "our").</p>
+                    <p class="paragraph">Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.</p>
+                    <h3 class="title-3">By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you do not have permission to access the Service.</h3>
+                    <div class="text-page-item" id="1">
+                        <h3 class="title-3">Communications</h3>
+                        <p class="paragraph">By creating an Account on our service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send.</p>
+                    </div>
+                    <div class="text-page-item" id="2">
+                        <h3 class="title-3">Content</h3>
+                        <p class="paragraph">Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material ("Content"). You are responsible for the Content that you post on or through the Service, including its legality, reliability, and appropriateness.</p>
+                        <p class="paragraph">By posting Content on or through the Service, You represent and warrant that: (i) the Content is yours (you own it) and/or you have the right to use it and the right to grant us the rights and license as provided in these Terms, and (ii) that the posting of your Content on or through the Service does not violate the privacy rights, publicity rights, copyrights, contract rights or any other rights of any person or entity. We reserve the right to terminate the account of anyone found to be infringing on a copyright.</p>
+                        <p class="paragraph">You retain any and all of your rights to any Content you submit, post or display on or through the Service and you are responsible for protecting those rights. We take no responsibility and assume no liability for Content you or any third party posts on or through the Service. However, by posting Content using the Service you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through the Service.</p>
+                        <p class="paragraph">SnapInspect International Ltd has the right but not the obligation to monitor and edit all Content provided by users.</p>
+                        <p class="paragraph">In addition, Content found on or through this Service are the property of SnapInspect International Ltd or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.</p>
+                    </div>
+                    <div class="text-page-item" id="3">
+                        <h3 class="title-3">Accounts</h3>
+                        <p class="paragraph">When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on the Service.</p>
+                        <p class="paragraph">You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Service or a third-party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+                        <p class="paragraph">You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trademark that is subject to any rights of another person or entity other than you, without appropriate authorization. You may not use as a username any name that is offensive, vulgar or obscene.</p>
+                        <p class="paragraph">We reserve the right to refuse service, terminate accounts, remove or edit content in our sole discretion.</p>
+                    </div>
+                    <div class="text-page-item" id="4">
+                        <h3 class="title-3">Links To Other Web Sites</h3>
+                        <p class="paragraph">Our Service may contain links to third party web sites or services that are not owned or controlled by SnapInspect International Ltd.</p>
+                        <p class="paragraph">SnapInspect International Ltd has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.</p>
+                        <p class="paragraph">You acknowledge and agree that SnapInspect International Ltd shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such third party web sites or services.</p>
+                        <p class="paragraph">We strongly advise you to read the terms and conditions and privacy policies of any third party web sites or services that you visit.</p>
+                    </div>
+                    <div class="text-page-item" id="5">
+                        <h3 class="title-3">Termination</h3>
+                        <p class="paragraph">We may terminate or suspend your account and bar access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
+                        <p class="paragraph">If you wish to terminate your account, you may simply discontinue using the Service.</p>
+                        <p class="paragraph">All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+                    </div>
+                    <div class="text-page-item" id="6">
+                        <h3 class="title-3">Indemnification</h3>
+                        <p class="paragraph">You agree to defend, indemnify and hold harmless SnapInspect International Ltd and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees), resulting from or arising out of a) your use and access of the Service, by you or any person using your account and password; b) a breach of these Terms, or c) Content posted on the Service.</p>
+                    </div>
+                    <div class="text-page-item" id="7">
+                        <h3 class="title-3">Limitation Of Liability</h3>
+                        <p class="paragraph">In no event shall SnapInspect International Ltd, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+                    </div>
+                    <div class="text-page-item" id="8">
+                        <h3 class="title-3">Disclaimer</h3>
+                        <p class="paragraph">Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.</p>
+                        <p class="paragraph">SnapInspect International Ltd its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.</p>
+                    </div>
+                    <div class="text-page-item" id="9">
+                        <h3 class="title-3">Exclusions</h3>
+                        <p class="paragraph">Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you.</p>
+                    </div>
+                    <div class="text-page-item" id="10">
+                        <h3 class="title-3">Governing Law</h3>
+                        <p class="paragraph">These Terms shall be governed and construed in accordance with the laws of United States, without regard to its conflict of law provisions.</p>
+                        <p class="paragraph">Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.</p>
+                    </div>
+                    <div class="text-page-item" id="11">
+                        <h3 class="title-3">Changes</h3>
+                        <p class="paragraph">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                        <p class="paragraph">By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Servic</p>
+                    </div>
+                    <div class="text-page-item" id="12">
+                        <h3 class="title-3">Contact Us</h3>
+                        <p class="paragraph">If you have any questions about these Terms, please contact us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="stop-sticky"></div>
+    <section class="section start-section">
+        <div class="abstract-element __5">
+            <div class="abstract-element-image __5">
+                <img data-src="img/abstract/5.png" class="abstract-element-image-item __move-element __move-speed-1" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title-2 section-title __white __on-scroll-show __hide __to-fadeIn">Are You Ready To Boost Your Inspection Operations <span class="__green">14 Day Free</span> Trial With FULL access to all features</h2>
+                    <div class="btns-group center-xs __on-scroll-show __hide __to-up">
+                        <a href="#" class="btn-link __border-theme __white-theme">Report a Demo</a>
+                        <a href="#" class="btn-link __solid-theme __white-theme">Try SnapInspect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" class="logo-image" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                    <div class="footer-nav-wrap">
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Product</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="how-it-works.html" class="nav-link">How It Works</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="cloud-inspect-soft.html" class="nav-link">Cloud Inspection Software</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="mobile-inspect-app.html" class="nav-link">Mobile Inspection App</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="smart-report.html" class="nav-link">Smart Reports</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="api.html" class="nav-link">SnapInspect API</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Industries</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="residential-property.html" class="nav-link">Residential Property Management</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="multi-family.html" class="nav-link">Multifamily</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="student-housing.html" class="nav-link">Student Housing</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="commercial-property.html" class="nav-link">Commercial Property Management</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="vacantion-rentals.html" class="nav-link">Vactation Rentals</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="home-inspection.html" class="nav-link">Home Inspections</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect for Any Industry</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Company</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Home</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="contacts-us.html" class="nav-link">Contact Us</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="partners.html" class="nav-link">Partner & Affiliate Programme</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">About Us</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Pricing</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Pricing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Mobile Apps</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">iOS App Download</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Android App Download</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Support</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect 3 Support</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect 2 Support</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="copyright">
+                        <p class="copyright-title">All rights reserved. SnapInspect 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script defer="defer" src="script.min.js?rev=fa418158618c8dc7adff94f9e3848b8c"></script>
+
+</body>
+</html>

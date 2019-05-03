@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="admin">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/ico">
+
+    <title>SnapInspect</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <meta name="theme-color" content="#0069ff">
+    <meta name="msapplication-navbutton-color" content="#0069ff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0069ff">
+
+    <style>.__on-load-show{-webkit-transition:opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1);transition:opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1);-o-transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1);transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1);transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1)}.__on-load-show.__hide.__to-down{-webkit-transform:translate(0,-100px);-ms-transform:translate(0,-100px);transform:translate(0,-100px);opacity:0}.__on-load-show.__hide.__to-up{-webkit-transform:translate(0,100px);-ms-transform:translate(0,100px);transform:translate(0,100px);opacity:0}.__on-load-show.__hide.__to-right{-webkit-transform:translate(-100px,0);-ms-transform:translate(-100px,0);transform:translate(-100px,0);opacity:0}.__on-load-show.__hide.__to-left{-webkit-transform:translate(100px,0);-ms-transform:translate(100px,0);transform:translate(100px,0);opacity:0}.__on-load-show.__hide.__to-fadeIn{opacity:0}.__on-load-show.__hide.__step.__to-left{-webkit-transform:translate(400px,0);-ms-transform:translate(400px,0);transform:translate(400px,0)}.__on-load-show.__hide.__to-zoom{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}.__on-load-show.__to-zoom{opacity:1}.__on-load-show.header{-webkit-transition-delay:.4s;-o-transition-delay:.4s;transition-delay:.4s}.__on-load-show.toggle-folder-video-circle-wrap{-webkit-transition:-webkit-transform 2s cubic-bezier(.6,.1,.15,1);transition:-webkit-transform 2s cubic-bezier(.6,.1,.15,1);-o-transition:transform 2s cubic-bezier(.6,.1,.15,1);transition:transform 2s cubic-bezier(.6,.1,.15,1);transition:transform 2s cubic-bezier(.6,.1,.15,1),-webkit-transform 2s cubic-bezier(.6,.1,.15,1);-webkit-transition-delay:1.4s;-o-transition-delay:1.4s;transition-delay:1.4s}.__on-load-show.toggle-folder-video-btn-wrap{-webkit-transition-delay:1.2s;-o-transition-delay:1.2s;transition-delay:1.2s}.__on-load-show.folder-section-preview{-webkit-transition-delay:1s;-o-transition-delay:1s;transition-delay:1s}</style>
+
+    <link rel="preload" href="fonts/poppins-v6-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-500.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-600.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-700.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+    <link rel="prefetch" href="styles.min.css" as="style">
+    <link rel="prefetch" href="script.min.js" as="script">
+
+    <link rel="stylesheet" href="styles.min.css?rev=fa418158618c8dc7adff94f9e3848b8c" onload="this.onload=null;this.rel='stylesheet'">
+
+</head>
+<body>
+
+<div id="wrapper">
+    <header class="header __on-load-show __hide __to-down">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6 col-12">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" class="logo-image" alt="SnapInspect">
+                    </a>
+                </div>
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <div class="close-modal"></div>
+                    <div class="nav-wrap">
+                        <nav class="nav">
+                            <ul class="nav-list">
+                                <li class="nav-list-item">
+                                    <a href="solutions.html" class="nav-link">Solutions</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="sub-nav-list-item">
+                                            <a href="how-it-works.html" class="nav-link">How It Works</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="cloud-inspect-soft.html" class="nav-link">Cloud Inspection Software</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="mobile-inspect-app.html" class="nav-link">Mobile Inspection App</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="smart-report.html" class="nav-link">Smart Report</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="api.html" class="nav-link">SnapInspect API</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a href="industries.html" class="nav-link">Industries</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="sub-nav-list-item">
+                                            <a href="" class="nav-link">Residential</a>
+                                            <ul class="sub-nav-list">
+                                                <li class="sub-nav-list-item">
+                                                    <a href="residential-property.html" class="nav-link">Residential Property Management</a>
+                                                </li>
+                                                <li class="sub-nav-list-item">
+                                                    <a href="multi-family.html" class="nav-link">Multi Family Management</a>
+                                                </li>
+                                                <li class="sub-nav-list-item">
+                                                    <a href="home-inspection.html" class="nav-link">Home Inspections</a>
+                                                </li>
+                                                <li class="sub-nav-list-item">
+                                                    <a href="student-housing.html" class="nav-link">Student Housing</a>
+                                                </li>
+                                                <li class="sub-nav-list-item">
+                                                    <a href="vacantion-rentals.html" class="nav-link">Vacation Rentals</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="" class="nav-link">Commercial</a>
+                                            <ul class="sub-nav-list">
+                                                <li class="sub-nav-list-item">
+                                                    <a href="commercial-property.html" class="nav-link">Commercial Property Management</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="" class="nav-link">Other Industries</a>
+                                            <ul class="sub-nav-list">
+                                                <li class="sub-nav-list-item">
+                                                    <a href="snap-for-anyone.html" class="nav-link">SnapInspect for Anyone</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a href="pricing.html" class="nav-link">Pricing</a>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a href="resources.html" class="nav-link">Resources</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="sub-nav-list-item">
+                                            <a href="sample-reports.html" class="nav-link">Sample Reports</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="happy-customers.html" class="nav-link">Happy Customers</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="#" class="nav-link">SnapInspect Support</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="#" class="nav-link">Blog</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="contacts-us.html" class="nav-link">Contact us</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="user-panel">
+                            <a href="login.html" class="nav-link __white">Customer Login</a>
+                            <a href="demo.html" class="btn-link __border-theme __white-theme">Request A Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 col-12">
+                    <div class="user-panel">
+                        <a href="login.html" class="nav-link __white">Customer Login</a>
+                        <a href="demo.html" class="btn-link __border-theme __white-theme">Request A Demo</a>
+                        <button class="toggle-nav-menu">
+                            <span class="toggle-nav-menu-wrap">
+                                <span class="toggle-nav-menu-arrow"></span>
+                                <span class="toggle-nav-menu-arrow"></span>
+                                <span class="toggle-nav-menu-arrow"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section folder-section __inner-page-theme __theme-4">
+        <div class="abstract-element __1">
+            <div class="abstract-element-image __1_4 __on-load-show __hide __to-left __step">
+                <img src="img/abstract/6_4.png" class="abstract-element-image-item __move-element __move-speed-4" alt="">
+            </div>
+            <div class="abstract-element-image __1_3 __on-load-show __hide __to-left __step">
+                <img src="img/abstract/6_3.png" class="abstract-element-image-item __move-element __move-speed-3" alt="">
+            </div>
+            <div class="abstract-element-image __1_2 __on-load-show __hide __to-left __step">
+                <img src="img/abstract/6_2.png" class="abstract-element-image-item __move-element __move-speed-2" alt="">
+            </div>
+            <div class="abstract-element-image __1_1 __on-load-show __hide __to-left __step">
+                <img src="img/abstract/6_1.png" class="abstract-element-image-item __move-element __move-speed-1" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="folder-section-content __on-load-show __hide __to-fadeIn">
+                        <h1 class="title-1">Join <span class="__green">thousands</span> of others who also <span class="__green">started</span> with a free trial!</h1>
+                        <div class="btns-group">
+                            <a href="login.html" class="btn-link __solid-theme __green-theme">Start FREE Trial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section partners-section">
+        <div class="col-xs-12">
+            <div class="partners-carousel __on-scroll-show __hide __to-fadeIn">
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/1.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/2.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/3.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/4.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/5.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/6.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/7.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/8.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/9.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/10.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/11.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/6.png" class="partners-carousel-slide-image" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pricing-cards-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title-2 section-title __on-scroll-show __hide __to-fadeIn">Pricing for Residential, Commercial, Apartments, Maintenence, Student Housing, Multi-Family & more.</h2>
+                </div>
+            </div>
+            <div class="price-box-list">
+                <div class="row center-xs">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="card-item __price-theme __solo __inline-theme __on-scroll-show __hide __to-right __step">
+                            <div class="box-price-header">
+                                <p class="box-price-header-title">Solo</p>
+                                <p class="box-price-header-value">$ <span class="price-value">49</span> p/m</p>
+                            </div>
+                            <div class="box-price-content">
+                                <ul class="default-list __blue-theme __flex-theme">
+                                    <li class="default-list-item">
+                                        <span class="default-list-item-title">Users</span>
+                                        <span class="default-list-item-title">1 User</span>
+                                    </li>
+                                    <li class="default-list-item">
+                                        <span class="default-list-item-title">Assets Managed*</span>
+                                        <span class="default-list-item-title">100</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn-link __solid-theme __blue-theme">Try it now free</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="card-item __price-theme __starter __inline-theme __on-scroll-show __hide __to-right __step">
+                            <div class="box-price-header">
+                                <p class="box-price-header-title">Starter</p>
+                                <p class="box-price-header-value">$ <span class="price-value">89</span> p/m</p>
+                            </div>
+                            <div class="box-price-content">
+                                <ul class="default-list __blue-theme __flex-theme">
+                                    <li class="default-list-item">
+                                        <span class="default-list-item-title">Users</span>
+                                        <span class="default-list-item-title">2 User</span>
+                                    </li>
+                                    <li class="default-list-item">
+                                        <span class="default-list-item-title">Assets Managed*</span>
+                                        <span class="default-list-item-title">100-300</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn-link __solid-theme __red-theme">Try it now free</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="card-item __price-theme __growth __inline-theme __on-scroll-show __hide __to-right __step">
+                            <div class="box-price-header">
+                                <p class="box-price-header-title">Growth</p>
+                                <p class="box-price-header-value">$ <span class="price-value">129</span> p/m</p>
+                            </div>
+                            <div class="box-price-content">
+                                <ul class="default-list __blue-theme __flex-theme">
+                                    <li class="default-list-item">
+                                        <span class="default-list-item-title">Users</span>
+                                        <span class="default-list-item-title">3 User</span>
+                                    </li>
+                                    <li class="default-list-item">
+                                        <span class="default-list-item-title">Assets Managed*</span>
+                                        <span class="default-list-item-title">300-450</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn-link __solid-theme __grown-theme">Try it now free</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title-2 section-title __on-scroll-show __hide __to-fadeIn">Companies with teams larger than 3 users and portfolios larger than 450 please contact us</h2>
+                    <div class="center-xs __on-scroll-show __hide __to-fadeIn">
+                        <a href="#" class="btn-link __solid-theme __green-theme">Try SnapInspect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section packages-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="card-item __package-theme __on-scroll-show __hide __to-fadeIn">
+                        <h2 class="title-2 __grown-light">Enterprise packages</h2>
+                        <ul class="default-list __blue-theme">
+                            <li class="default-list-item">Integration</li>
+                            <li class="default-list-item">Advanced custom logic</li>
+                            <li class="default-list-item">Exlusive access to new features </li>
+                            <li class="default-list-item">Сustomized workflow</li>
+                            <li class="default-list-item">Full access to all features</li>
+                            <li class="default-list-item">Report customization (Word, PDF & Excel)</li>
+                            <li class="default-list-item">Tenant portal</li>
+                            <li class="default-list-item">Franchise admin panel</li>
+                        </ul>
+                        <p class="paragraph">If your portfolio exceeds 1500 units please get in contact with us to get a custom quote.</p>
+                        <a href="#" class="btn-link __solid-theme __grown-theme">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section start-section __title-theme">
+        <div class="abstract-element __5">
+            <div class="abstract-element-image __5">
+                <img data-src="img/abstract/5.png" class="abstract-element-image-item __move-element __move-speed-1" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title-2 section-title __white __on-scroll-show __hide __to-fadeIn">Features Comparison</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section comparison-section">
+        <div class="abstract-element __2 __on-scroll-show __hide __to-right">
+            <div class="abstract-element-image __2_3">
+                <img data-src="img/abstract/2_3.png" class="abstract-element-image-item __move-element __move-speed-4" alt="">
+            </div>
+            <div class="abstract-element-image __2_2">
+                <img data-src="img/abstract/2_2.png" class="abstract-element-image-item __move-element __move-speed-3" alt="">
+            </div>
+            <div class="abstract-element-image __2_1">
+                <img data-src="img/abstract/2_1.png" class="abstract-element-image-item __move-element __move-speed-2" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="card-item table-wrap __comparison-theme __on-scroll-show __hide __to-fadeIn">
+                        <div class="custom-scrollbar">
+                            <div class="custom-scrollbar-body"></div>
+                        </div>
+                        <div class="table-wrap-scroll">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        <p class="table-paragraph __blue">Standard Features</p>
+                                    </th>
+                                    <th>
+                                        <p class="table-paragraph __blue-light">Solo</p>
+                                    </th>
+                                    <th>
+                                        <p class="table-paragraph __red">Starter</p>
+                                    </th>
+                                    <th>
+                                        <p class="table-paragraph __grown">Growth</p>
+                                    </th>
+                                    <th>
+                                        <p class="table-paragraph __orange">Team</p>
+                                    </th>
+                                    <th>
+                                        <p class="table-paragraph __grown-dark">Company</p>
+                                    </th>
+                                    <th>
+                                        <p class="table-paragraph __grown-light">Enterprise</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Web App</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Browser based cloud app giving you access and admin control of your SnapInspect account.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Offline Mobile App</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">iOS & Android app that allows you to collect inspection data completely offline.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Checklist Editor</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Create your own templates using our very own checklist editor.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Copy/Convert Inspection</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Ability ot start a new inspection based off an inspection that was previously completed.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">PDF & Word Report</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Side by Side Report</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">A side by side comparison of two reports.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Bulk Asset Upload</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Task Manager</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Manage tasks/defects found in any inspection.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Basic Report Customization</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Limited report customization. Add logo, disclaimer, change report colour theme and more.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Video Inspection</span>
+                                        </p>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="6">
+                                        <p class="table-paragraph __blue">Advanced Features</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Custom Email Template</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Help you compose a very personlised email to summarize your inspection findings.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Advanced Report customization</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Include all basic customization plus full control of all visual elements of the inspection report.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Smart Report</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Custom logic, customized costing/ratings/calculations, summaries and more.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Workflow Management</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">The SnapInspect version of 'If this, Then that'. Trigger events (email, schedule, status update etc) and get notifications based on the condition of the inspection.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Multi User Inspection</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Multiple users can collaborate on one inspection.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Request Inspection</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Allow third parties to conduct inspections on your behalf. For e.g. tenants can conduct inspections or submit maintenance requests.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Review Inspection</span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Excel Reports</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Export your inspection data into excel format for analysis</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="6">
+                                        <p class="table-paragraph __blue">Other</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Business Intelligence</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Custom analytics dashboard to improve business operations.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">API Integration</span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">DropBox & Google Drive Sync</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="6">
+                                        <p class="table-paragraph __blue">Support</p>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Ticket Based Support</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">In App Chat</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Phone</span>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-solo.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-starter.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-growth.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-team.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-company.svg" class="check-icon" alt="">
+                                    </td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="table-paragraph">
+                                            <span class="paragraph-title">Premium Support</span>
+                                            <span class="__has-helper">
+                                                i
+                                                <span class="helper-item">Browser based cloud app giving you access and admin control of your SnapInspect account.</span>
+                                            </span>
+                                        </p>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <img data-src="img/icons/check-mark-enterprise.svg" class="check-icon" alt="">
+                                    </td>
+                                </tr>
+                            </table>
+                            <p class="paragraph __detail-theme">* All plans are in USD, and come with unlimited Inspections</p>
+                            <p class="paragraph __detail-theme">* A managed asset is either a single family resedential home or a single unit in multi family building.</p>
+                            <p class="paragraph __detail-theme">For Commercial its units inside that commercial block of properties e.g A mall with 40 shops=40 units.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section faq-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="card-item __faq-theme __on-scroll-show __hide __to-fadeIn">
+                        <h2 class="title-2">Frequently Asked Questions</h2>
+                        <div class="collapse-wrap">
+                            <div class="collapse-wrap-item">
+                                <div class="collapse-wrap-item-header">
+                                    <p class="collapse-wrap-item-header-title">
+                                        <span class="collapse-wrap-item-header-title-num"></span>
+                                        Can I bulk upload my properties and units?
+                                    </p>
+                                </div>
+                                <div class="collapse-wrap-item-content">
+                                    <p class="paragraph">You can customize any checklist and any element in the design or report.</p>
+                                </div>
+                            </div>
+                            <div class="collapse-wrap-item">
+                                <div class="collapse-wrap-item-header">
+                                    <p class="collapse-wrap-item-header-title">
+                                        <span class="collapse-wrap-item-header-title-num"></span>
+                                        How far can i go with customizations?
+                                    </p>
+                                </div>
+                                <div class="collapse-wrap-item-content">
+                                    <p class="paragraph">You can customize any checklist and any element in the design or report.</p>
+                                </div>
+                            </div>
+                            <div class="collapse-wrap-item">
+                                <div class="collapse-wrap-item-header">
+                                    <p class="collapse-wrap-item-header-title">
+                                        <span class="collapse-wrap-item-header-title-num"></span>
+                                        Which devices can i use the app on?
+                                    </p>
+                                </div>
+                                <div class="collapse-wrap-item-content">
+                                    <p class="paragraph">You can customize any checklist and any element in the design or report.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section why-we-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title-2 section-title __on-scroll-show __hide __to-fadeIn">Why Choose SnapInspect?</h2>
+                    <h3 class="title-3 section-subtitle __on-scroll-show __hide __to-fadeIn">With Proven Results, Happy Customers, Real ROI, Trust From Top Companies & Industry First Features It's Hard Not To Choose SnapInspect</h3>
+                </div>
+                <div class="col-xs-12">
+                    <div class="tabs-wrap __on-scroll-show __hide __to-fadeIn">
+                        <button class="tab-link active" data-nav-id="0">Tons of Features</button>
+                        <button class="tab-link" data-nav-id="1">Proven Results</button>
+                        <button class="tab-link" data-nav-id="2">Huge ROI</button>
+                        <button class="tab-link" data-nav-id="3">Apps on iOS & Android</button>
+                        <button class="tab-link" data-nav-id="4">Quick Setup</button>
+                        <button class="tab-link" data-nav-id="5">Super Support</button>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="tabs-content __on-scroll-show __hide __to-fadeIn">
+                        <div class="tabs-content-carousel">
+                            <div class="tabs-content-carousel-slide">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <div class="tab-content-preview">
+                                            <div class="mask-wrap">
+                                                <svg width="100%" height="100%">
+                                                    <defs>
+                                                        <mask id="1">
+                                                            <image width="100%" height="100%" xlink:href="img/shape-mask-2.png"/>
+                                                        </mask>
+                                                    </defs>
+                                                    <image mask="url(#1)" width="100%" height="100%" xlink:href="img/author.jpg"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7 col-xs-12">
+                                        <div class="tab-content-text">
+                                            <blockquote class="blockquote" data-dots="“">
+                                                <span class="blockquote-paragraph">When searching for an all-inclusive commercial and residential inspection software, SnapInspect answered that call. Though we were nervous at first with going with a company in a completely different country in regards to customer service/programming needs, they have made the process seamless in every way with constant communication.</span>
+                                                <span class="blockquote-paragraph">Ultimately, our inspection completion has increased by 300% since unveiling  SnapInspect to our Property Management Teams and Property Inspectors</span>
+                                            </blockquote>
+                                            <div class="blockquote-author">
+                                                <div class="blockquote-author-text">
+                                                    <p class="blockquote-author-title">Tim Scarabrough,</p>
+                                                    <p class="blockquote-author-subtitle">Business Analyst, Bedrock Detroit</p>
+                                                </div>
+                                                <div class="blockquote-author-logos">
+                                                    <img src="img/author-logo.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="btns-group">
+                                                <button class="slick-prev slick-arrow"></button>
+                                                <button class="slick-next slick-arrow"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-content-carousel-slide">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <div class="tab-content-preview">
+                                            <div class="mask-wrap">
+                                                <svg width="100%" height="100%">
+                                                    <defs>
+                                                        <mask id="111">
+                                                            <image width="100%" height="100%" xlink:href="img/shape-mask-2.png"/>
+                                                        </mask>
+                                                    </defs>
+                                                    <image mask="url(#111)" width="100%" height="100%" xlink:href="https://images.pexels.com/photos/262391/pexels-photo-262391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7 col-xs-12">
+                                        <div class="tab-content-text">
+                                            <blockquote class="blockquote" data-dots="“">
+                                                <span class="blockquote-paragraph">Ultimately, our inspection completion has increased by 300% since unveiling  SnapInspect to our Property Management Teams and Property Inspectors</span>
+                                                <span class="blockquote-paragraph">When searching for an all-inclusive commercial and residential inspection software, SnapInspect answered that call. Though we were nervous at first with going with a company in a completely different country in regards to customer service/programming needs, they have made the process seamless in every way with constant communication.</span>
+                                            </blockquote>
+                                            <div class="blockquote-author">
+                                                <div class="blockquote-author-text">
+                                                    <p class="blockquote-author-title">Tim Scarabrough,</p>
+                                                    <p class="blockquote-author-subtitle">Business Analyst, Bedrock Detroit</p>
+                                                </div>
+                                                <div class="blockquote-author-logos">
+                                                    <img src="img/author-logo.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="btns-group">
+                                                <button class="slick-prev slick-arrow"></button>
+                                                <button class="slick-next slick-arrow"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-content-carousel-slide">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <div class="tab-content-preview">
+                                            <div class="mask-wrap">
+                                                <svg width="100%" height="100%">
+                                                    <defs>
+                                                        <mask id="111">
+                                                            <image width="100%" height="100%" xlink:href="img/shape-mask-2.png"/>
+                                                        </mask>
+                                                    </defs>
+                                                    <image mask="url(#111)" width="100%" height="100%" xlink:href="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7 col-xs-12">
+                                        <div class="tab-content-text">
+                                            <blockquote class="blockquote" data-dots="“">
+                                                <span class="blockquote-paragraph">When searching for an all-inclusive commercial and residential inspection software, SnapInspect answered that call. Though we were nervous at first with going with a company in a completely different country in regards to customer service/programming needs, they have made the process seamless in every way with constant communication.</span>
+                                                <span class="blockquote-paragraph">Ultimately, our inspection completion has increased by 300% since unveiling  SnapInspect to our Property Management Teams and Property Inspectors</span>
+                                            </blockquote>
+                                            <div class="blockquote-author">
+                                                <div class="blockquote-author-text">
+                                                    <p class="blockquote-author-title">Tim Scarabrough,</p>
+                                                    <p class="blockquote-author-subtitle">Business Analyst, Bedrock Detroit</p>
+                                                </div>
+                                                <div class="blockquote-author-logos">
+                                                    <img src="img/author-logo.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="btns-group">
+                                                <button class="slick-prev slick-arrow"></button>
+                                                <button class="slick-next slick-arrow"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-content-carousel-slide">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <div class="tab-content-preview">
+                                            <div class="mask-wrap">
+                                                <svg width="100%" height="100%">
+                                                    <defs>
+                                                        <mask id="111">
+                                                            <image width="100%" height="100%" xlink:href="img/shape-mask-2.png"/>
+                                                        </mask>
+                                                    </defs>
+                                                    <image mask="url(#111)" width="100%" height="100%" xlink:href="https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7 col-xs-12">
+                                        <div class="tab-content-text">
+                                            <blockquote class="blockquote" data-dots="“">
+                                                <span class="blockquote-paragraph">Ultimately, our inspection completion has increased by 300% since unveiling  SnapInspect to our Property Management Teams and Property Inspectors</span>
+                                                <span class="blockquote-paragraph">When searching for an all-inclusive commercial and residential inspection software, SnapInspect answered that call. Though we were nervous at first with going with a company in a completely different country in regards to customer service/programming needs, they have made the process seamless in every way with constant communication.</span>
+                                            </blockquote>
+                                            <div class="blockquote-author">
+                                                <div class="blockquote-author-text">
+                                                    <p class="blockquote-author-title">Tim Scarabrough,</p>
+                                                    <p class="blockquote-author-subtitle">Business Analyst, Bedrock Detroit</p>
+                                                </div>
+                                            </div>
+                                            <div class="btns-group">
+                                                <button class="slick-prev slick-arrow"></button>
+                                                <button class="slick-next slick-arrow"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-content-carousel-slide">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <div class="tab-content-preview">
+                                            <div class="mask-wrap">
+                                                <svg width="100%" height="100%">
+                                                    <defs>
+                                                        <mask id="111">
+                                                            <image width="100%" height="100%" xlink:href="img/shape-mask-2.png"/>
+                                                        </mask>
+                                                    </defs>
+                                                    <image mask="url(#111)" width="100%" height="100%" xlink:href="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7 col-xs-12">
+                                        <div class="tab-content-text">
+                                            <blockquote class="blockquote" data-dots="“">
+                                                <span class="blockquote-paragraph">When searching for an all-inclusive commercial and residential inspection software, SnapInspect answered that call. Though we were nervous at first with going with a company in a completely different country in regards to customer service/programming needs, they have made the process seamless in every way with constant communication.</span>
+                                                <span class="blockquote-paragraph">Ultimately, our inspection completion has increased by 300% since unveiling  SnapInspect to our Property Management Teams and Property Inspectors</span>
+                                            </blockquote>
+                                            <div class="blockquote-author">
+                                                <div class="blockquote-author-text">
+                                                    <p class="blockquote-author-title">Tim Scarabrough,</p>
+                                                    <p class="blockquote-author-subtitle">Business Analyst, Bedrock Detroit</p>
+                                                </div>
+                                            </div>
+                                            <div class="btns-group">
+                                                <button class="slick-prev slick-arrow"></button>
+                                                <button class="slick-next slick-arrow"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-content-carousel-slide">
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5 col-xs-12">
+                                        <div class="tab-content-preview">
+                                            <div class="mask-wrap">
+                                                <svg width="100%" height="100%">
+                                                    <defs>
+                                                        <mask id="111">
+                                                            <image width="100%" height="100%" xlink:href="img/shape-mask-2.png"/>
+                                                        </mask>
+                                                    </defs>
+                                                    <image mask="url(#111)" width="100%" height="100%" xlink:href="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-sm-7 col-xs-12">
+                                        <div class="tab-content-text">
+                                            <blockquote class="blockquote" data-dots="“">
+                                                <span class="blockquote-paragraph">Ultimately, our inspection completion has increased by 300% since unveiling  SnapInspect to our Property Management Teams and Property Inspectors</span>
+                                                <span class="blockquote-paragraph">When searching for an all-inclusive commercial and residential inspection software, SnapInspect answered that call. Though we were nervous at first with going with a company in a completely different country in regards to customer service/programming needs, they have made the process seamless in every way with constant communication.</span>
+                                            </blockquote>
+                                            <div class="blockquote-author">
+                                                <div class="blockquote-author-text">
+                                                    <p class="blockquote-author-title">Tim Scarabrough,</p>
+                                                    <p class="blockquote-author-subtitle">Business Analyst, Bedrock Detroit</p>
+                                                </div>
+                                                <div class="blockquote-author-logos">
+                                                    <img src="img/author-logo.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="btns-group">
+                                                <button class="slick-prev slick-arrow"></button>
+                                                <button class="slick-next slick-arrow"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" class="logo-image" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                    <div class="footer-nav-wrap">
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Product</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="how-it-works.html" class="nav-link">How It Works</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="cloud-inspect-soft.html" class="nav-link">Cloud Inspection Software</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="mobile-inspect-app.html" class="nav-link">Mobile Inspection App</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="smart-report.html" class="nav-link">Smart Reports</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="api.html" class="nav-link">SnapInspect API</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Industries</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="residential-property.html" class="nav-link">Residential Property Management</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="multi-family.html" class="nav-link">Multifamily</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="student-housing.html" class="nav-link">Student Housing</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="commercial-property.html" class="nav-link">Commercial Property Management</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="vacantion-rentals.html" class="nav-link">Vactation Rentals</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="home-inspection.html" class="nav-link">Home Inspections</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect for Any Industry</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Company</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Home</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="contacts-us.html" class="nav-link">Contact Us</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="partners.html" class="nav-link">Partner & Affiliate Programme</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">About Us</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Pricing</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Pricing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Mobile Apps</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">iOS App Download</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Android App Download</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Support</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect 3 Support</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect 2 Support</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="copyright">
+                        <p class="copyright-title">All rights reserved. SnapInspect 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script defer="defer" src="script.min.js?rev=fa418158618c8dc7adff94f9e3848b8c"></script>
+
+</body>
+</html>

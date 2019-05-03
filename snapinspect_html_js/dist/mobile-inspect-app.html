@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="admin">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/ico">
+
+    <title>SnapInspect</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <meta name="theme-color" content="#0069ff">
+    <meta name="msapplication-navbutton-color" content="#0069ff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0069ff">
+
+    <style>.__on-load-show{-webkit-transition:opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1);transition:opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1);-o-transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1);transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1);transition:transform 1.4s cubic-bezier(.6,.1,.15,1),opacity 1s cubic-bezier(.6,.1,.15,1),-webkit-transform 1.4s cubic-bezier(.6,.1,.15,1)}.__on-load-show.__hide.__to-down{-webkit-transform:translate(0,-100px);-ms-transform:translate(0,-100px);transform:translate(0,-100px);opacity:0}.__on-load-show.__hide.__to-up{-webkit-transform:translate(0,100px);-ms-transform:translate(0,100px);transform:translate(0,100px);opacity:0}.__on-load-show.__hide.__to-right{-webkit-transform:translate(-100px,0);-ms-transform:translate(-100px,0);transform:translate(-100px,0);opacity:0}.__on-load-show.__hide.__to-left{-webkit-transform:translate(100px,0);-ms-transform:translate(100px,0);transform:translate(100px,0);opacity:0}.__on-load-show.__hide.__to-fadeIn{opacity:0}.__on-load-show.__hide.__step.__to-left{-webkit-transform:translate(400px,0);-ms-transform:translate(400px,0);transform:translate(400px,0)}.__on-load-show.__hide.__to-zoom{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0)}.__on-load-show.__to-zoom{opacity:1}.__on-load-show.header{-webkit-transition-delay:.4s;-o-transition-delay:.4s;transition-delay:.4s}.__on-load-show.toggle-folder-video-circle-wrap{-webkit-transition:-webkit-transform 2s cubic-bezier(.6,.1,.15,1);transition:-webkit-transform 2s cubic-bezier(.6,.1,.15,1);-o-transition:transform 2s cubic-bezier(.6,.1,.15,1);transition:transform 2s cubic-bezier(.6,.1,.15,1);transition:transform 2s cubic-bezier(.6,.1,.15,1),-webkit-transform 2s cubic-bezier(.6,.1,.15,1);-webkit-transition-delay:1.4s;-o-transition-delay:1.4s;transition-delay:1.4s}.__on-load-show.toggle-folder-video-btn-wrap{-webkit-transition-delay:1.2s;-o-transition-delay:1.2s;transition-delay:1.2s}.__on-load-show.folder-section-preview{-webkit-transition-delay:1s;-o-transition-delay:1s;transition-delay:1s}</style>
+
+    <link rel="preload" href="fonts/poppins-v6-latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-500.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-600.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v6-latin-700.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+    <link rel="prefetch" href="styles.min.css" as="style">
+    <link rel="prefetch" href="script.min.js" as="script">
+
+    <link rel="stylesheet" href="styles.min.css?rev=fa418158618c8dc7adff94f9e3848b8c" onload="this.onload=null;this.rel='stylesheet'">
+
+</head>
+<body>
+
+<div id="wrapper">
+    <header class="header __on-load-show __hide __to-down">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6 col-12">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" class="logo-image" alt="SnapInspect">
+                    </a>
+                </div>
+                <div class="col-md-5 col-sm-12 col-xs-12">
+                    <div class="close-modal"></div>
+                    <div class="nav-wrap">
+                        <nav class="nav">
+                            <ul class="nav-list">
+                                <li class="nav-list-item">
+                                    <a href="solutions.html" class="nav-link">Solutions</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="sub-nav-list-item">
+                                            <a href="how-it-works.html" class="nav-link">How It Works</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="cloud-inspect-soft.html" class="nav-link">Cloud Inspection Software</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="mobile-inspect-app.html" class="nav-link">Mobile Inspection App</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="smart-report.html" class="nav-link">Smart Report</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="api.html" class="nav-link">SnapInspect API</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a href="industries.html" class="nav-link">Industries</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="sub-nav-list-item">
+                                            <a href="" class="nav-link">Residential</a>
+                                            <ul class="sub-nav-list">
+                                                <li class="sub-nav-list-item">
+                                                    <a href="residential-property.html" class="nav-link">Residential Property Management</a>
+                                                </li>
+                                                <li class="sub-nav-list-item">
+                                                    <a href="multi-family.html" class="nav-link">Multi Family Management</a>
+                                                </li>
+                                                <li class="sub-nav-list-item">
+                                                    <a href="home-inspection.html" class="nav-link">Home Inspections</a>
+                                                </li>
+                                                <li class="sub-nav-list-item">
+                                                    <a href="student-housing.html" class="nav-link">Student Housing</a>
+                                                </li>
+                                                <li class="sub-nav-list-item">
+                                                    <a href="vacantion-rentals.html" class="nav-link">Vacation Rentals</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="" class="nav-link">Commercial</a>
+                                            <ul class="sub-nav-list">
+                                                <li class="sub-nav-list-item">
+                                                    <a href="commercial-property.html" class="nav-link">Commercial Property Management</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="" class="nav-link">Other Industries</a>
+                                            <ul class="sub-nav-list">
+                                                <li class="sub-nav-list-item">
+                                                    <a href="snap-for-anyone.html" class="nav-link">SnapInspect for Anyone</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a href="pricing.html" class="nav-link">Pricing</a>
+                                </li>
+                                <li class="nav-list-item">
+                                    <a href="resources.html" class="nav-link">Resources</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="sub-nav-list-item">
+                                            <a href="sample-reports.html" class="nav-link">Sample Reports</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="happy-customers.html" class="nav-link">Happy Customers</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="#" class="nav-link">SnapInspect Support</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="#" class="nav-link">Blog</a>
+                                        </li>
+                                        <li class="sub-nav-list-item">
+                                            <a href="contacts-us.html" class="nav-link">Contact us</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="user-panel">
+                            <a href="login.html" class="nav-link __white">Customer Login</a>
+                            <a href="demo.html" class="btn-link __border-theme __white-theme">Request A Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 col-12">
+                    <div class="user-panel">
+                        <a href="login.html" class="nav-link __white">Customer Login</a>
+                        <a href="demo.html" class="btn-link __border-theme __white-theme">Request A Demo</a>
+                        <button class="toggle-nav-menu">
+                            <span class="toggle-nav-menu-wrap">
+                                <span class="toggle-nav-menu-arrow"></span>
+                                <span class="toggle-nav-menu-arrow"></span>
+                                <span class="toggle-nav-menu-arrow"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section folder-section __inner-page-theme __theme-3">
+        <div class="abstract-element __1">
+            <div class="abstract-element-image __1_4 __on-load-show __hide __to-left __step">
+                <img src="img/abstract/6_4.png" class="abstract-element-image-item __move-element __move-speed-4" alt="">
+            </div>
+            <div class="abstract-element-image __1_3 __on-load-show __hide __to-left __step">
+                <img src="img/abstract/6_3.png" class="abstract-element-image-item __move-element __move-speed-3" alt="">
+            </div>
+            <div class="abstract-element-image __1_2 __on-load-show __hide __to-left __step">
+                <img src="img/abstract/6_2.png" class="abstract-element-image-item __move-element __move-speed-2" alt="">
+            </div>
+            <div class="abstract-element-image __1_1 __on-load-show __hide __to-left __step">
+                <img src="img/abstract/6_1.png" class="abstract-element-image-item __move-element __move-speed-1" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="folder-section-content __on-load-show __hide __to-fadeIn">
+                        <h1 class="title-1">iOS & Android App <span class="__green">For Inspections</span></h1>
+                        <p class="subtitle">SnapInspect Mobile App works together with the Web App to help property inspectors. Go mobile, and replaces ordinary pen and paper form inspections.</p>
+                        <div class="btns-group">
+                            <a href="#" class="btn-link __border-theme __green-theme">Request a Demo</a>
+                            <a href="login.html" class="btn-link __solid-theme __green-theme">Start FREE Trial</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="folder-section-preview __on-load-show __hide __to-up">
+                        <img src="img/devices/7.png" alt="" class="folder-section-preview-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section scroll-nav-section __on-scroll-show __hide __to-fadeIn">
+        <div class="scroll-nav-section-panel">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="tabs-wrap __scroll-nav-theme">
+                            <button class="tab-link __scroll-link" data-scroll-id="#1">Easy Access</button>
+                            <button class="tab-link __scroll-link" data-scroll-id="#2">Create</button>
+                            <button class="tab-link __scroll-link" data-scroll-id="#3">Schedule</button>
+                            <button class="tab-link __scroll-link" data-scroll-id="#4">Video</button>
+                            <button class="tab-link __scroll-link" data-scroll-id="#5">iOS & Android</button>
+                            <button class="tab-link __scroll-link" data-scroll-id="#6">Email</button>
+                            <button class="tab-link __scroll-link" data-scroll-id="#7">Industries</button>
+                            <button class="tab-link __scroll-link" data-scroll-id="#8">Support</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section partners-section">
+        <div class="col-xs-12">
+            <div class="partners-carousel __on-scroll-show __hide __to-fadeIn">
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/1.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/2.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/3.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/4.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/5.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/6.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/7.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/8.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/9.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/10.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/11.png" class="partners-carousel-slide-image" alt="">
+                </div>
+                <div class="partners-carousel-slide">
+                    <img data-src="img/partners/6.png" class="partners-carousel-slide-image" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section dot-section" id="1">
+        <div class="abstract-element __8">
+            <div class="abstract-element-image __8_3 __on-scroll-show __hide __to-right __step">
+                <img src="img/abstract/8_3.png" class="abstract-element-image-item __move-element __move-speed-4" alt="">
+            </div>
+            <div class="abstract-element-image __8_2 __on-scroll-show __hide __to-right __step">
+                <img src="img/abstract/8_2.png" class="abstract-element-image-item __move-element __move-speed-4" alt="">
+            </div>
+            <div class="abstract-element-image __8_1 __on-scroll-show __hide __to-right __step">
+                <img src="img/abstract/8_1.png" class="abstract-element-image-item __move-element __move-speed-4" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <ul class="default-list __blue-theme __md-size __white-color">
+                        <li class="default-list-item">Customize and capture photos, comments and ratings.</li>
+                        <li class="default-list-item">Send reports from your device with push of a button</li>
+                        <li class="default-list-item">Record videos & capture more details with inspections</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <ul class="default-list __blue-theme __md-size">
+                        <li class="default-list-item">Create beautiful reports in both MS Word & PDF formats.</li>
+                        <li class="default-list-item">Create follow up tasks to keep tracking of maintenance.</li>
+                        <li class="default-list-item">Copy previous inspection data avoid extra work.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section chess-section __chess-section-2">
+        <div class="container">
+            <div class="chess-section-row" id="2">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="chess-preview __on-scroll-show __hide __to-fadeIn">
+                            <img data-src="img/chess_15.png" class="chess-preview-image" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="chess-content __on-scroll-show __hide __to-fadeIn">
+                            <p class="chess-content-title">Everything done at your finger tips</p>
+                            <p>Save time as you breeze through inspections. After you have completed an inspection, instantly send it to your client in PDF or MS Word format.</p>
+                            <p>Search function to help you find the right asset. Pick pre-defined words/phrases during the inspection to help fill out fields quicker. Use task follow up to keep on track of all maintenance issues. Maps for diections and many more useful features.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chess-section-row" id="3">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="chess-preview __on-scroll-show __hide __to-fadeIn">
+                            <img data-src="img/chess_16.png" class="chess-preview-image" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 __on-scroll-show __hide __to-fadeIn">
+                        <div class="chess-content">
+                            <p class="chess-content-title">Use our pre-made templates or you can import your own one</p>
+                            <p>Bring your own checklistsand start going through your inspections like never before! Increase the productivity of your team by providing accurate checklists, signatures, ratings, comments, photos and videos to record the condition of the asset.</p>
+                            <p>Alternatively you can use our pre-loaded checklists for residential, multi-family, vacation rentals, housekeeping, pre-purchase, insurance, building and many more.</p>
+                            <a href="#" class="btn-link __solid-theme __green-theme">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section detail-section" id="4">
+        <div class="abstract-element __3 __on-scroll-show __hide __to-left">
+            <div class="abstract-element-image __3_3">
+                <img data-src="img/abstract/3_3.png" class="abstract-element-image-item __move-element __move-speed-4" alt="">
+            </div>
+            <div class="abstract-element-image __3_2">
+                <img data-src="img/abstract/3_2.png" class="abstract-element-image-item __move-element __move-speed-3" alt="">
+            </div>
+            <div class="abstract-element-image __3_1">
+                <img data-src="img/abstract/3_1.png" class="abstract-element-image-item __move-element __move-speed-2" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row center-xs">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="card-item __inline-theme __on-scroll-show __hide __to-right __step">
+                        <div class="card-item-icon">
+                            <img data-src="img/icons/wi-fi.svg" alt="" class="card-item-icon-image">
+                        </div>
+                        <p class="card-item-title">Work Offline</p>
+                        <p class="card-item-description">Complete inspections offline without internet access and upload all inspection data once connected to the internet.</p>
+                        <a href="#" class="nav-link __more-theme">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="card-item __inline-theme __on-scroll-show __hide __to-right __step">
+                        <div class="card-item-icon">
+                            <img data-src="img/icons/collaboration.svg" alt="" class="card-item-icon-image">
+                        </div>
+                        <p class="card-item-title">Team Collaboration</p>
+                        <p class="card-item-description">Adios paperwork! Sync all information across all your devices, everything is done via cloud. Our mobile app help you finish inspections accurately, fast and super efficient.</p>
+                        <a href="#" class="nav-link __more-theme">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="card-item __inline-theme __on-scroll-show __hide __to-right __step">
+                        <div class="card-item-icon">
+                            <img data-src="img/icons/play.svg" alt="" class="card-item-icon-image">
+                        </div>
+                        <p class="card-item-title">Capture Videos</p>
+                        <p class="card-item-description">SnapInspect is the only property inspection app with built in video capability. Shoot videos directly from your smart devices and attach to your report.</p>
+                        <a href="#" class="nav-link __more-theme">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section adding-section" id="5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title-2 section-title __on-scroll-show __hide __to-fadeIn">We're always adding new features to help improve your inspection process</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="default-list __blue-theme __futures-list __on-scroll-show __hide __to-fadeIn">
+                        <li class="default-list-item">Sync Across All devices</li>
+                        <li class="default-list-item">Bulk Property Upload</li>
+                        <li class="default-list-item">Photo Annotations</li>
+                        <li class="default-list-item">Time/Date Photo Stamp</li>
+
+                        <li class="default-list-item">Custom Checklist</li>
+                        <li class="default-list-item">State Law</li>
+                        <li class="default-list-item">AutoText Comments</li>
+                        <li class="default-list-item">Web Share Report</li>
+
+                        <li class="default-list-item">Multi Language</li>
+                        <li class="default-list-item">Video Inspections</li>
+                        <li class="default-list-item">Smart Reports</li>
+                        <li class="default-list-item">Inspection Alerts</li>
+
+                        <li class="default-list-item">Remote Signatures</li>
+                        <li class="default-list-item">Team Collaboration</li>
+                        <li class="default-list-item">Custom Reports</li>
+                        <li class="default-list-item">Multi-Family Support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="adding-quote-wrap __on-scroll-show __hide __to-up" id="6">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="tab-content-preview">
+                            <div class="mask-wrap __adding-theme">
+                                <svg width="100%" height="100%">
+                                    <defs>
+                                        <mask id="111">
+                                            <image width="100%" height="100%" xlink:href="img/shape-mask-3.png"/>
+                                        </mask>
+                                    </defs>
+                                    <image mask="url(#111)" width="100%" height="100%" xlink:href="img/place.jpg"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="tab-content-text">
+                            <blockquote class="blockquote" data-dots="“">
+                                <span class="blockquote-paragraph">Before SnapInspect we only used pen and paper but we will never go back to doing things the way of the past.SnapInspect is leaps and bounds ahead of the other companies, that I shopped, based on cost and efficiency. </span>
+                                <span class="blockquote-paragraph">SnapInspect gave me the feeling that they would do whatever they could to get us in the door and when you are looking for an App that is exactly what you want to hear. Not only did they tell us they could make us a better product they also delivered on their promise.</span>
+                            </blockquote>
+                            <div class="blockquote-author">
+                                <div class="blockquote-author-text">
+                                    <p class="blockquote-author-title"><span class="__green">Shane Convenry</span> - Real Equity Management</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn-link __solid-theme __green-theme">Start FREE Trial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section chess-section __chess-section-6">
+        <div class="container">
+            <div class="chess-section-row" id="7">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="chess-preview __on-scroll-show __hide __to-fadeIn">
+                            <img data-src="img/chess_17.png" class="chess-preview-image" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="chess-content __on-scroll-show __hide __to-fadeIn">
+                            <h2 class="title-2">Manage your inspection process end to end</h2>
+                            <a href="#" class="btn-link __solid-theme __green-theme">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chess-section-row" id="8">
+                <div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="chess-preview __on-scroll-show __hide __to-fadeIn">
+                            <img data-src="img/chess_18.png" class="chess-preview-image" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 __on-scroll-show __hide __to-fadeIn">
+                        <div class="chess-content">
+                            <h2 class="title-2">Create a customized checklistfor any type of inspection</h2>
+                            <a href="#" class="btn-link __solid-theme __green-theme">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section start-section">
+        <div class="abstract-element __5">
+            <div class="abstract-element-image __5">
+                <img data-src="img/abstract/5.png" class="abstract-element-image-item __move-element __move-speed-1" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="title-2 section-title __white __on-scroll-show __hide __to-fadeIn">Are You Ready To Boost Your Inspection Operations <span class="__green">14 Day Free</span> Trial With FULL access to all features</h2>
+                    <div class="btns-group center-xs __on-scroll-show __hide __to-fadeIn">
+                        <a href="#" class="btn-link __border-theme __white-theme">Report a Demo</a>
+                        <a href="#" class="btn-link __solid-theme __white-theme">Try SnapInspect</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.png" class="logo-image" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+                    <div class="footer-nav-wrap">
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Product</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="how-it-works.html" class="nav-link">How It Works</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="cloud-inspect-soft.html" class="nav-link">Cloud Inspection Software</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="mobile-inspect-app.html" class="nav-link">Mobile Inspection App</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="smart-report.html" class="nav-link">Smart Reports</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="api.html" class="nav-link">SnapInspect API</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Industries</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="residential-property.html" class="nav-link">Residential Property Management</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="multi-family.html" class="nav-link">Multifamily</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="student-housing.html" class="nav-link">Student Housing</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="commercial-property.html" class="nav-link">Commercial Property Management</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="vacantion-rentals.html" class="nav-link">Vactation Rentals</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="home-inspection.html" class="nav-link">Home Inspections</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect for Any Industry</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Company</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Home</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="contacts-us.html" class="nav-link">Contact Us</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="partners.html" class="nav-link">Partner & Affiliate Programme</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">About Us</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect Blog</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Pricing</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Pricing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-nav-wrap-col">
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Mobile Apps</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">iOS App Download</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">Android App Download</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-nav-wrap-item">
+                                <a href="" class="nav-link">Support</a>
+                                <ul class="sub-footer-nav-wrap">
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect 3 Support</a>
+                                    </li>
+                                    <li class="sub-footer-nav-wrap-item">
+                                        <a href="#" class="nav-link">SnapInspect 2 Support</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="copyright">
+                        <p class="copyright-title">All rights reserved. SnapInspect 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script defer="defer" src="script.min.js?rev=fa418158618c8dc7adff94f9e3848b8c"></script>
+
+</body>
+</html>
